@@ -26,13 +26,13 @@ cc.Class({
 
     onKeyDown (event) {
         switch(event.keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this.moveFlags |= MOVE_LEFT;
                 this.updateMotorSpeed();
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this.moveFlags |= MOVE_RIGHT;
                 this.updateMotorSpeed();
                 break;
@@ -41,13 +41,13 @@ cc.Class({
 
     onKeyUp (event) {
         switch(event.keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this.moveFlags &= ~MOVE_LEFT;
                 // this.updateMotorSpeed();
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this.moveFlags &= ~MOVE_RIGHT;
                 // this.updateMotorSpeed();
                 break;

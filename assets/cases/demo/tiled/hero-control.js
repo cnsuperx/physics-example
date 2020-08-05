@@ -30,15 +30,15 @@ cc.Class({
 
     onKeyDown (event) {
         switch(event.keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this._moveFlags |= MOVE_LEFT;
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this._moveFlags |= MOVE_RIGHT;
                 break;
-            case cc.KEY.up:
+            case cc.macro.KEY.up:
                 if (!this._upPressed) {
                     this._up = true;
                 }
@@ -49,15 +49,15 @@ cc.Class({
 
     onKeyUp (event) {
         switch(event.keyCode) {
-            case cc.KEY.a:
-            case cc.KEY.left:
+            case cc.macro.KEY.a:
+            case cc.macro.KEY.left:
                 this._moveFlags &= ~MOVE_LEFT;
                 break;
-            case cc.KEY.d:
-            case cc.KEY.right:
+            case cc.macro.KEY.d:
+            case cc.macro.KEY.right:
                 this._moveFlags &= ~MOVE_RIGHT;
                 break;
-            case cc.KEY.up:
+            case cc.macro.KEY.up:
                 this._upPressed = false;
                 break;
         }

@@ -108,13 +108,13 @@ cc.Class({
         let self = this;
         let urlArr = url.split('/');
         let fileName = urlArr[urlArr.length - 1].replace('.fire', '');
-        cc.loader.loadRes('readme/' + fileName, function(err, txt) {
-            if (err) {
-                self.text.string = i18n.t("scripts/Global/Menu.js.1");
-                return;
-            }
-            self.text.string = txt;
-        });
+        // cc.loader.loadRes('readme/' + fileName, function(err, txt) {
+        //     if (err) {
+        //         self.text.string = i18n.t("scripts/Global/Menu.js.1");
+        //         return;
+        //     }
+        //     self.text.string = txt;
+        // });
     },
 
     showReadme: function (event, active) {
