@@ -9,7 +9,9 @@ cc.Class({
     },
 
     onPreSolve: function (contact) {
+        // 获取世界坐标系下的碰撞信息
         let worldManifold = contact.getWorldManifold();
+        // 碰撞点集合
         let points = worldManifold.points;
         let scene = cc.director.getScene();
 

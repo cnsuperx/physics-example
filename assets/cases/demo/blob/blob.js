@@ -38,10 +38,15 @@ cc.Class({
             let sphere = this._createSphere(posX, posY, sphereSize);
             spheres.push( sphere );
             
+            // DistanceJoint：距离关节，通过一个固定的长度来约束关节链接的两个刚体，例如无质量坚固的木棍
             let joint = sphere.node.addComponent(cc.DistanceJoint);
+            // 关节另一端链接的刚体
             joint.connectedBody = spheres[0];
+            // 关节两端的距离
             joint.distance = particleRadius;
+            // 阻尼，关节变形后，恢复到初始状态收到的阻力
             joint.dampingRatio = 0.5;
+            // 弹性系数
             joint.frequency = 4;
 
             if (i > 0) {
@@ -76,9 +81,13 @@ cc.Class({
         let body = node.addComponent(cc.RigidBody);
 
         let collider = node.addComponent(cc.PhysicsCircleCollider);
+        // 密度
         collider.density = 1;
+        // 弹性系数
         collider.restitution = 0.4;
+        // 摩擦系数
         collider.friction = 0.5;
+        // 圆形半径
         collider.radius = r;
 
         return body;

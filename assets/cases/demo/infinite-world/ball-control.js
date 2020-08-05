@@ -84,6 +84,7 @@ cc.Class({
             desiredSpeed = -this.maxSpeed;
         else if ( (this.moveFlags & MOVE_RIGHT) == MOVE_RIGHT )
             desiredSpeed = this.maxSpeed;
+        // 刚体的角速度    
         this.body.angularVelocity = desiredSpeed;
     },
 

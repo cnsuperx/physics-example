@@ -15,10 +15,12 @@ cc.Class({
         cc.director.getPhysicsManager().gravity = this.originGravity;
     },
 
+    // 碰撞回调
     onBeginContact: function (contact, selfCollider, otherCollider) {
         this.bodies.push(otherCollider.body);
     },
 
+    // 碰撞回调
     onEndContact: function (contact, selfCollider, otherCollider) {
         let index = this.bodies.indexOf(otherCollider.body);
         if (index !== -1) {

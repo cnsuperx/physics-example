@@ -30,9 +30,12 @@ cc.Class({
     extends: cc.Component,
 
     onEnable: function () {
+        // 设置调试绘制标志
         this.debugDrawFlags = cc.director.getPhysicsManager().debugDrawFlags;
         cc.director.getPhysicsManager().debugDrawFlags = 
+            // 绘制关节链接信息
             cc.PhysicsManager.DrawBits.e_jointBit |
+            // 绘制形状
             cc.PhysicsManager.DrawBits.e_shapeBit
             ;
     },
